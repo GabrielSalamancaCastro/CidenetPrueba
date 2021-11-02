@@ -1,0 +1,82 @@
+<form class="formulario-empleados" [formGroup]='empleadoForm'>
+
+    <div class="form-group mt-5">
+      <label for="exampleInputEmail1">PRIMER APELLIDO</label>
+      <input type="text" class="form-control" formControlName="primerApellido" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter primer apellido">
+      <small id="emailHelp" class="form-text text-muted">Este campo debe estar en MAYUSCULAS</small>
+    </div>
+
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">SEGUNDO APELLIDO</label>
+        <input type="text" class="form-control" formControlName="segundoApellido" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter segundo apellido">
+        <small id="emailHelp" class="form-text text-muted">Este campo debe estar en MAYUSCULAS</small>
+    </div>
+
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">PRIMER NOMBRE</label>
+        <input type="text" class="form-control" formControlName="primerNombre" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter primer nombre">
+        <small id="emailHelp" class="form-text text-muted">Este campo debe estar en MAYUSCULAS</small>
+    </div>  
+    
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">OTROS NOMBRES</label>
+        <input type="text" class="form-control" formControlName="otrosNombre" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter otros nombres">
+        <small id="emailHelp" class="form-text text-muted">Este campo debe estar en MAYUSCULAS (Campo no obligatorio)</small>
+    </div>   
+
+    <div class="form-group mt-5">
+        <label> PAIS DE EMPLEO </label>
+        <select  class= "form-control" formControlName="paisEmpleo">
+            <option selected>Selecciona...</option>
+            <option>COLOMBIA</option>
+            <option>USA</option>
+        </select>
+      </div>
+
+    <div class="form-group mt-5">
+        <label> TIPO DE IDENTIFICACION </label>
+        <select  class= "form-control" formControlName="tipoIdentificacion">
+            <option selected>Selecciona...</option>
+            <option>Cedula de ciudadania</option>
+            <option>Cedula de extranjeria</option>
+            <option>Pasaporte</option>
+            <option>Permiso Especial</option>
+        </select>
+    </div>
+
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">NUMERO IDENTIFICACION</label>
+        <input type="text" class="form-control" formControlName="numeroIdentificacion" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter numero de Identificacion">
+        <small id="emailHelp" class="form-text text-muted">Tu numero de identificacion debe ser unico</small>
+    </div>
+    
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">FECHA INGRESO</label>
+        <input type="date" class="form-control" formControlName="fechaIngreso" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter fecha ingreso">
+        <small id="emailHelp" class="form-text text-muted">Tu numero de identificacion debe ser unico</small>
+    </div>
+
+    <div class="form-group mt-5">
+        <label> AREA </label>
+        <select  class= "form-control" formControlName="area">
+            <option selected>Selecciona...</option>
+            <option>Administracion</option>
+            <option>Financiera</option>
+            <option>Compras</option>
+            <option>Infraestructura</option>
+            <option>Desarrollo</option>
+            <option>Talento Humano</option>
+        </select>
+    </div>
+
+    <div class="form-group mt-5">
+        <label> ESTADO </label>
+        <select  class= "form-control" formControlName="estado">
+            <option selected>ACTIVO</option>
+        </select>
+    </div>
+
+
+    
+    <button type="submit" class="btn btn-primary mt-5" (click)=" empleadoPost()">Submit</button>
+  </form>
